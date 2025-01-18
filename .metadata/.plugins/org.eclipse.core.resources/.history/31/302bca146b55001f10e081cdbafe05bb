@@ -1,0 +1,41 @@
+package com.tka.Organization.Management.System.service;
+
+import java.util.Objects;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tka.Organization.Management.System.dao.MainDao;
+import com.tka.OrganizationManagementSystem.entity.Country;
+
+@Service
+public class MainService {
+	
+	@Autowired
+	 MainDao dao;
+	
+	
+
+	public String addcountry(Country c) {
+		// TODO Auto-generated method stub
+		String msg= dao.addcountry(c);
+		if(msg==null) {
+			msg="Country is not added....";
+		}
+		return msg;
+	}
+
+
+
+	public String updateCountry(Country c) {
+		// TODO Auto-generated method stub
+
+		String msg= dao.updateCountry(c);
+		if(Objects.isNull(msg)) {
+			msg="Country is not Updatated....";
+		}
+
+		return msg;
+	}
+}
+

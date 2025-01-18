@@ -1,0 +1,12 @@
+package com.tka.Organization.Management.System.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MainService {
+	
+	public String addcountry() {
+		return null;
+
+}
+}
